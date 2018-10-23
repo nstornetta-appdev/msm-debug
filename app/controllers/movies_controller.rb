@@ -16,6 +16,7 @@ class MoviesController < ApplicationController
   end
 
   def create_row
+    @movie = Movie.new
     @movie.title = params.fetch("title")
     @movie.year = params.fetch("year")
     @movie.duration = params.fetch("duration")
